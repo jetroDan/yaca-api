@@ -1,0 +1,27 @@
+{
+  "name": "yaca-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "axios": "^1.2.1",
+    "cors": "^2.8.5",
+    "cron": "^2.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.7.1",
+    "memory-cache": "^0.2.0",
+    "mongoose": "^6.9.2",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.20",
+    "twilio": "^4.7.2"
+  }
+}
