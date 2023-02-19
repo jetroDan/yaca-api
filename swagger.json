@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://ec2-18-217-249-129.us-east-2.compute.amazonaws.com",
+            "url": "http://ec2-18-217-249-129.us-east-2.compute.amazonaws.com:9000",
             "description": "Development API"
         }
     ],
