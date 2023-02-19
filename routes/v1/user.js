@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const SMS = require('../controller/twilio.controller')
+const SMS = require('../../controller/twilio.controller')
 const Joi = require('joi');
-const UserController = require("../controller/User.controller")
+const UserController = require("../../controller/User.controller")
 const bcrypt = require('bcrypt')
 const KEY = process.env.JWT_KEY;
-const {MESSAGE_RESPONSE_CODE,MESSAGE_RESPONSE} = require('../lib/constants')
+const {MESSAGE_RESPONSE_CODE,MESSAGE_RESPONSE} = require('../../lib/constants')
 const jwt = require('jsonwebtoken');
+
 
 
 router.post("/create",async (req,res)=>{
@@ -31,7 +32,7 @@ router.post("/create",async (req,res)=>{
        return res.status(MESSAGE_RESPONSE_CODE.CREATED).json({
         message:MESSAGE_RESPONSE.CREATED,
         status:MESSAGE_RESPONSE_CODE.CREATED,
-        data:newUser
+        result:newUser
        })
     } catch (error) {
         console.log(error);  
@@ -49,9 +50,9 @@ router.get("/:id",async (req,res)=>{
         
         let user = await UserController.getUserId(id)
 
-        return res.status(MESSAGE_RESPONSE_CODE.CREATED).json({
-            message:MESSAGE_RESPONSE.CREATED,
-            status:MESSAGE_RESPONSE_CODE.CREATED,
+        return res.status(MESSAGE_RESPONSE_CODE.OK).json({
+            message:MESSAGE_RESPONSE.OK,
+            status:MESSAGE_RESPONSE_CODE.OK,
             data: user
            })
 
@@ -122,5 +123,7 @@ router.post("/login",async(req,res)=>{
            })
     }
 })
+
+
 
 module.exports = router;
