@@ -24,7 +24,6 @@
     "node-cron": "^3.0.2",
     "nodemon": "^2.0.20",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^4.6.1",
-    "twilio": "^4.7.2"
+    "swagger-ui-express": "^4.6.1"
   }
 }

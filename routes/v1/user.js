@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const SMS = require('../../controller/twilio.controller')
 const Joi = require('joi');
 const UserController = require("../../controller/User.controller")
 const bcrypt = require('bcrypt')
-const KEY = process.env.JWT_KEY;
 const {MESSAGE_RESPONSE_CODE,MESSAGE_RESPONSE} = require('../../lib/constants')
 const jwt = require('jsonwebtoken');
 
