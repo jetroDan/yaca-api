@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://pruebas.dani9oo.dev/",
+            "url": "https://ec2-18-217-249-129.us-east-2.compute.amazonaws.com",
             "description": "Development API"
         }
     ],
